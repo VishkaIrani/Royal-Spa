@@ -1,4 +1,609 @@
 <h1>Welcome to Royal Spa</h1>
 <p>Website coming soon...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Royal Spa | Medical Spa & Wellness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Royal Spa – a modern medical spa offering advanced skincare, beauty, and wellness treatments.">
+  <style>
+    :root {
+      --bg: #f7f4f1;
+      --accent: #b08a5b;
+      --accent-dark: #8b6a43;
+      --text: #2b2b2b;
+      --muted: #666;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 244, 241, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 4rem 0 3rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      max-width: 30rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span {
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .hero-meta span::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 1.5rem;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-card-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-card-list li {
+      margin-bottom: 0.4rem;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .hero-card-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 32rem;
+      margin: 0.3rem auto 0;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 1.2rem;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .service-title {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* About */
+    .about {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .about-highlight {
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: 1.4rem;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .about-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 0.6rem;
+    }
+
+    .about-list li {
+      margin-bottom: 0.4rem;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .about-list li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Contact */
+    .contact {
+      background: #f0ebe6;
+      border-radius: 1.8rem;
+      padding: 2.5rem 2rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-details {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-details div {
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-details span {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .contact-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    footer {
+      padding: 2rem 0 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent-dark);
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .about,
+      .contact {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 3rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .nav-links {
+        font-size: 0.8rem;
+        gap: 1rem;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .contact {
+        padding: 2rem 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          ROYAL <span>SPA</span>
+        </div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#book" class="book-link">Book</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="container hero" id="top">
+      <div>
+        <div class="hero-tag">Medical spa · Skin · Wellness</div>
+        <h1 class="hero-title">
+          Subtle, <span>elegant</span> results<br />
+          that still look like you.
+        </h1>
+        <p class="hero-subtitle">
+          Royal Spa combines medical-grade treatments with a calm, minimal atmosphere—so you can feel refreshed, confident, and completely yourself.
+        </p>
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Book a consultation
+        </button>
+        <div class="hero-meta">
+          <span>Personalized treatment plans</span>
+          <span>Evidence-based skincare</span>
+          <span>Comfort-first experience</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-label">Featured focus</div>
+        <h2 class="hero-card-title">Glow & Confidence Program</h2>
+        <p class="hero-card-text">
+          A curated series of treatments designed to improve texture, tone, and radiance over 8–12 weeks.
+        </p>
+        <ul class="hero-card-list">
+          <li>Skin assessment with a medical professional</li>
+          <li>Customized facial + targeted treatments</li>
+          <li>Home-care routine recommendations</li>
+        </ul>
+        <button class="btn-primary" style="width: 100%;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Start your journey
+        </button>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-eyebrow">Treatments</div>
+          <h2 class="section-title">Services designed around your skin</h2>
+          <p class="section-subtitle">
+            Every treatment begins with a conversation. We listen, assess, and recommend only what truly fits your goals.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-label">Face</div>
+            <h3 class="service-title">Advanced Facials</h3>
+            <p class="service-text">
+              Deep cleansing, hydration, and targeted treatments to restore balance, glow, and comfort to your skin.
+            </p>
+            <div class="service-meta">Perfect for: dullness, congestion, first-time visits.</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Clinical</div>
+            <h3 class="service-title">Medical-Grade Peels</h3>
+            <p class="service-text">
+              Professionally selected peels to refine texture, soften fine lines, and support long-term skin health.
+            </p>
+            <div class="service-meta">Perfect for: texture, pigmentation, early aging signs.</div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-label">Calm</div>
+            <h3 class="service-title">Soothing Treatments</h3>
+            <p class="service-text">
+              Gentle, barrier-supporting care for sensitive or reactive skin, focused on comfort and repair.
+            </p>
+            <div class="service-meta">Perfect for: sensitivity, redness, stressed skin.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container about">
+        <div class="about-text">
+          <div class="section-eyebrow">About Royal Spa</div>
+          <h2 class="section-title">A quiet space for intentional care</h2>
+          <p>
+            Royal Spa was created for people who want results without losing themselves in the process. We focus on subtle, natural-looking improvements that align with your features, lifestyle, and comfort level.
+          </p>
+          <p>
+            Our approach blends medical knowledge with a minimalist philosophy: fewer, better treatments—chosen with care, explained with clarity, and delivered with respect for your time and energy.
+          </p>
+          <div class="about-highlight">
+            We believe confidence is not about changing who you are—it’s about feeling at ease in your own skin.
+          </div>
+        </div>
+
+        <aside class="about-card">
+          <h3>What you can expect</h3>
+          <p>
+            From your first visit, we keep things simple, transparent, and pressure-free.
+          </p>
+          <ul class="about-list">
+            <li>Thoughtful consultation and skin assessment</li>
+            <li>Clear explanations of every option</li>
+            <li>Realistic, honest expectations</li>
+            <li>Aftercare guidance you can actually follow</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact / Booking -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact">
+          <div>
+            <div class="section-eyebrow">Contact</div>
+            <h2>Book a consultation</h2>
+            <p>
+              Share your goals, questions, or concerns—and we’ll recommend a path that feels right for you. No pressure, no rush.
+            </p>
+            <button class="btn-primary" id="book">
+              Email us to book
+            </button>
+            <div class="contact-note">
+              Prefer messaging? You can also reach out via your favourite social platform once it’s connected.
+            </div>
+          </div>
+          <div class="contact-details">
+            <div><span>Email:</span> hello@royalspa.example</div>
+            <div><span>Location:</span> Your City, Your Area</div>
+            <div><span>Hours:</span> By appointment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Royal Spa. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
 
