@@ -10,8 +10,8 @@
 }
 
 body {
-  background: #ffffff;
-  color: #222;
+  background: #fff7fa; /* صورتی خیلی ملایم */
+  color: #111; /* متن مشکی */
   line-height: 1.7;
   padding-bottom: 60px;
 }
@@ -29,19 +29,21 @@ img {
 .site-header {
   text-align: center;
   padding: 40px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f1dce3;
+  background: #fff0f5; /* صورتی روشن */
 }
 
 .site-header h1 {
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: -1px;
+  color: #111;
 }
 
 .tagline {
   margin-top: 8px;
   font-size: 1rem;
-  color: #666;
+  color: #444;
 }
 
 .nav {
@@ -53,7 +55,7 @@ img {
 
 .nav a {
   text-decoration: none;
-  color: #222;
+  color: #111;
   font-weight: 500;
   transition: 0.2s;
 }
@@ -64,7 +66,7 @@ img {
 
 .btn-primary.small {
   padding: 6px 14px;
-  border: 1px solid #222;
+  border: 1px solid #111;
   border-radius: 6px;
 }
 
@@ -80,25 +82,22 @@ img {
   gap: 40px;
 }
 
-.hero-text {
-  flex: 1;
-}
-
 .hero-text h2 {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 15px;
+  color: #111;
 }
 
 .hero-text p {
-  color: #555;
+  color: #333;
   margin-bottom: 20px;
 }
 
 .btn-primary {
   display: inline-block;
   padding: 12px 22px;
-  background: #222;
+  background: #d4af37; /* طلایی ملایم */
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -106,21 +105,13 @@ img {
 }
 
 .btn-primary:hover {
-  background: #000;
+  background: #b8962f; /* طلایی کمی تیره‌تر برای هاور
 }
+/* دکمه ثانویه */ .btn-secondary { padding: 10px 20px; border: 1px solid #d4af37; border-radius: 6px; text-decoration: none; color: #d4af37; transition: 0.2s; } .btn-secondary:hover { background: #d4af37; color: #fff; }
 
-.hero-highlights {
-  margin-top: 20px;
-  list-style: none;
-  color: #444;
-}
-
-.hero-highlights li {
+   .hero-highlights li {
   margin-bottom: 6px;
-}
-
-.hero-image {
-  flex: 1;
+  color: #333;
 }
 
 /* ------------------------------
@@ -130,40 +121,36 @@ img {
 .featured {
   text-align: center;
   padding: 70px 10%;
-  background: #f8f8f8;
+  background: #ffeef4; /* صورتی خیلی ملایم */
 }
 
 .featured h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #111;
 }
 
 .featured p {
-  color: #555;
+  color: #444;
   margin-bottom: 20px;
-}
-
-.feature-list {
-  list-style: none;
-  margin-bottom: 25px;
 }
 
 .feature-list li {
   margin-bottom: 8px;
-  color: #444;
+  color: #333;
 }
 
 .btn-secondary {
   padding: 10px 20px;
-  border: 1px solid #222;
+  border: 1px solid #111;
   border-radius: 6px;
   text-decoration: none;
-  color: #222;
+  color: #111;
   transition: 0.2s;
 }
 
 .btn-secondary:hover {
-  background: #222;
+  background: #111;
   color: #fff;
 }
 
@@ -178,11 +165,12 @@ img {
 .services h2 {
   text-align: center;
   margin-bottom: 10px;
+  color: #111;
 }
 
 .services p {
   text-align: center;
-  color: #555;
+  color: #444;
   margin-bottom: 40px;
 }
 
@@ -194,7 +182,7 @@ img {
 
 .service-card {
   padding: 25px;
-  border: 1px solid #eee;
+  border: 1px solid #f1dce3;
   border-radius: 10px;
   background: #fff;
   transition: 0.2s;
@@ -207,16 +195,16 @@ img {
 
 .service-card h3 {
   margin-bottom: 10px;
+  color: #111;
 }
 
 .service-card p {
-  color: #555;
-  margin-bottom: 10px;
+  color: #444;
 }
 
 .tag {
   font-size: 0.9rem;
-  color: #777;
+  color: #666;
 }
 
 /* ------------------------------
@@ -225,33 +213,25 @@ img {
 
 .products {
   padding: 70px 10%;
-  background: #fafafa;
+  background: #fff0f5;
 }
 
 .products h2 {
   text-align: center;
   margin-bottom: 10px;
+  color: #111;
 }
 
 .products p {
   text-align: center;
-  color: #555;
+  color: #444;
   margin-bottom: 40px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-.product-card {
-  text-align: center;
 }
 
 .product-card h4 {
   margin-top: 10px;
   font-weight: 500;
+  color: #111;
 }
 
 /* ------------------------------
@@ -264,21 +244,17 @@ img {
 
 .about h2 {
   margin-bottom: 15px;
+  color: #111;
 }
 
 .about p {
-  color: #555;
+  color: #444;
   margin-bottom: 20px;
-}
-
-.expect-list {
-  list-style: none;
-  margin-top: 20px;
 }
 
 .expect-list li {
   margin-bottom: 8px;
-  color: #444;
+  color: #333;
 }
 
 /* ------------------------------
@@ -287,16 +263,16 @@ img {
 
 .contact {
   padding: 70px 10%;
-  background: #f8f8f8;
+  background: #ffeef4;
 }
 
 .contact h2 {
   margin-bottom: 10px;
+  color: #111;
 }
 
 .contact p {
-  color: #555;
-  margin-bottom: 10px;
+  color: #444;
 }
 
 /* ------------------------------
@@ -333,7 +309,31 @@ img {
   font-size: 0.9rem;
 }
 
-  
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
