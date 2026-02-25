@@ -5,55 +5,143 @@
   <title>Royal Spa</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Header -->
   <header class="site-header">
     <h1>Royal Spa</h1>
-    <p class="tagline">Relax. Renew. Rejuvenate.</p>
+    <p class="tagline">Medical spa · Skin · Wellness</p>
 
-    <!-- Navigation -->
     <nav class="nav">
-      <a href="#products">Products</a>
       <a href="#services">Services</a>
-      <a href="#booking">Booking</a>
+      <a href="#products">Products</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="btn-primary small">Book</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-text">
-      <h2>Luxury Spa Experience</h2>
-      <p>Enjoy a premium spa experience with relaxing massages, facials, and wellness treatments designed to refresh your body and mind.</p>
-      <a href="#services" class="btn-primary">View Our Services</a>
+      <h2>Subtle, elegant results that still look like you.</h2>
+      <p>
+        Royal Spa combines medical‑grade treatments with a calm, minimal atmosphere—so you can feel refreshed, confident, and completely yourself.
+      </p>
+      <a href="#booking" class="btn-primary">Book a consultation</a>
+
+      <ul class="hero-highlights">
+        <li>Personalized treatment plans</li>
+        <li>Evidence‑based skincare</li>
+        <li>Comfort‑first experience</li>
+      </ul>
     </div>
 
     <div class="hero-image">
-      <img src="assets/images/spa.jpg" alt="Royal Spa Interior">
+      <img src="assets/spa.jpg" alt="Royal Spa Interior">
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- Featured Program -->
+  <section class="featured">
+    <h2>Glow & Confidence Program</h2>
+    <p>A curated series of treatments designed to improve texture, tone, and radiance over 8–12 weeks.</p>
+
+    <ul class="feature-list">
+      <li>Skin assessment with a medical professional</li>
+      <li>Customized facial + targeted treatments</li>
+      <li>Home‑care routine recommendations</li>
+    </ul>
+
+    <a href="#services" class="btn-secondary">Start your journey</a>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <h2>Services designed around your skin</h2>
+    <p>Every treatment begins with a conversation. We listen, assess, and recommend only what truly fits your goals.</p>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Advanced Facials</h3>
+        <p>Deep cleansing, hydration, and targeted treatments to restore balance, glow, and comfort.</p>
+        <span class="tag">Perfect for: dullness, congestion, first‑time visits.</span>
+      </div>
+
+      <div class="service-card">
+        <h3>Medical‑Grade Peels</h3>
+        <p>Professionally selected peels to refine texture, soften fine lines, and support long‑term skin health.</p>
+        <span class="tag">Perfect for: texture, pigmentation, early aging signs.</span>
+      </div>
+
+      <div class="service-card">
+        <h3>Soothing Treatments</h3>
+        <p>Gentle, barrier‑supporting care for sensitive or reactive skin.</p>
+        <span class="tag">Perfect for: sensitivity, redness, stressed skin.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Products -->
   <section id="products" class="products">
     <h2>Our Products</h2>
-    <ul>
-      <li>Luxury Body Oil</li>
-      <li>Herbal Facial Cleanser</li>
-      <li>Aromatherapy Candles</li>
-      <li>Hydrating Skin Serum</li>
+    <p>Premium skincare essentials selected to support your treatment results.</p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/product1.jpg" alt="Luxury Body Oil">
+        <h4>Luxury Body Oil</h4>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/product2.jpg" alt="Herbal Facial Cleanser">
+        <h4>Herbal Facial Cleanser</h4>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/product3.jpg" alt="Aromatherapy Candles">
+        <h4>Aromatherapy Candles</h4>
+      </div>
+
+      <div class="product-card">
+        <img src="assets/product4.jpg" alt="Hydrating Skin Serum">
+        <h4>Hydrating Skin Serum</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>A quiet space for intentional care</h2>
+    <p>
+      Royal Spa was created for people who want results without losing themselves in the process.  
+      We focus on subtle, natural‑looking improvements that align with your features, lifestyle, and comfort level.
+    </p>
+
+    <p>
+      Our approach blends medical knowledge with a minimalist philosophy: fewer, better treatments—chosen with care, explained with clarity, and delivered with respect for your time and energy.
+    </p>
+
+    <h3>What you can expect</h3>
+    <ul class="expect-list">
+      <li>Thoughtful consultation and skin assessment</li>
+      <li>Clear explanations of every option</li>
+      <li>Realistic, honest expectations</li>
+      <li>Aftercare guidance you can actually follow</li>
     </ul>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Full Body Massage</li>
-      <li>Facial Treatments</li>
-      <li>Aromatherapy</li>
-      <li>Hot Stone Therapy</li>
-    </ul>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Book a consultation</h2>
+    <p>Share your goals, questions, or concerns—and we’ll recommend a path that feels right for you.</p>
+
+    <p>Email: <a href="mailto:hello@royalspa.example">hello@royalspa.example</a></p>
+    <p>Location: Your City, Your Area</p>
+    <p>Hours: By appointment</p>
   </section>
 
   <!-- Booking Form -->
@@ -69,10 +157,9 @@
 
       <label>Select Service:</label>
       <select required>
-        <option>Full Body Massage</option>
-        <option>Facial Treatment</option>
-        <option>Aromatherapy</option>
-        <option>Hot Stone Therapy</option>
+        <option>Advanced Facial</option>
+        <option>Medical‑Grade Peel</option>
+        <option>Soothing Treatment</option>
       </select>
 
       <label>Date:</label>
@@ -82,25 +169,19 @@
     </form>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Royal Spa</h2>
-    <p>
-      Royal Spa is a luxury wellness center offering premium treatments designed to relax your body and refresh your mind.
-      Visit our official website:
-      <a href="https://royalspa.com" target="_blank">royalspa.com</a>
-    </p>
-  </section>
-
   <!-- Footer -->
   <footer class="site-footer">
     <p>© 2025 Royal Spa. All rights reserved.</p>
   </footer>
 
 </body>
-
 </html>
 
+  
+
+
+   
+  
  
 
 
