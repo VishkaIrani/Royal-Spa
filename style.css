@@ -13,9 +13,8 @@ h1, h2 {
 
 /* FADE-IN EFFECT */
 .fade-in {
-  animation: fadeIn 1.2s ease forwards;
-  opacity: 0;
-}
+  animation: fadeIn 3s ease forwards;
+  }
 
 @keyframes fadeIn {
   to { opacity: 1; }
