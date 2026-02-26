@@ -13,7 +13,7 @@ h1, h2 {
 
 /* FADE-IN EFFECT */
 .fade-in {
-  animation: fadeIn 3s ease forwards;
+  animation: fadeIn 5s ease forwards;
   }
 
 @keyframes fadeIn {
