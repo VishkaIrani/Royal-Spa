@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Royal Spa</title>
+
+  <!-- Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,98 +15,93 @@
 
   <!-- HEADER -->
   <header class="hero">
-    <div class="hero-overlay">
+    <div class="hero-overlay fade-in">
       <h1>Royal Spa</h1>
       <p>Subtle, elegant results that still look like you.</p>
-      <a href="#contact" class="btn">Book a Consultation</a>
+      <a href="#contact" class="btn">Book Now</a>
     </div>
   </header>
 
   <!-- INTRO -->
-  <section class="intro">
+  <section class="intro fade-in">
     <p>
-      Royal Spa combines medical‑grade treatments with a calm, minimal atmosphere—so you can feel refreshed, confident, and completely yourself.
+      A calm, minimal, luxury space where medical‑grade beauty meets spa relaxation.
     </p>
   </section>
 
   <!-- SPA SERVICES -->
-  <section class="services">
+  <section class="services fade-in">
     <h2>Spa Services</h2>
 
-    <div class="card">
-      <h3>Advanced Facials</h3>
-      <p>Deep cleansing, hydration, and targeted treatments to restore balance, glow, and comfort.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Advanced Facials</button>
+      <div class="accordion-content">
+        <p>Customized professional facial treatments based on your skin needs: hydration, deep cleansing, brightening, acne care, and anti‑aging protocols.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Relaxing Body Treatments</h3>
-      <p>Full‑body relaxation therapies designed to release tension and improve circulation.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Relaxing Body Treatments</button>
+      <div class="accordion-content">
+        <p>Includes Swedish massage, hot stone massage, deep tissue massage, and lymphatic drainage for full‑body relaxation.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Aromatherapy Rituals</h3>
-      <p>Calming essential‑oil treatments for stress relief and emotional balance.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Aromatherapy Rituals</button>
+      <div class="accordion-content">
+        <p>Aromatherapy combined with gentle massage to reduce stress, improve mood, and promote emotional balance.</p>
+      </div>
     </div>
   </section>
 
-  <!-- BEAUTY CLINIC SERVICES -->
-  <section class="clinic">
+  <!-- BEAUTY CLINIC -->
+  <section class="clinic fade-in">
     <h2>Beauty Clinic Treatments</h2>
 
-    <div class="card">
-      <h3>Medical‑Grade Peels</h3>
-      <p>Refines texture, softens fine lines, and supports long‑term skin health.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Medical‑Grade Peels</button>
+      <div class="accordion-content">
+        <p>Professional chemical peels designed to refine texture, brighten skin, and support long‑term skin health.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Soothing Treatments</h3>
-      <p>Gentle, barrier‑supporting care for sensitive or reactive skin.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Skin Rejuvenation Devices</button>
+      <div class="accordion-content">
+        <p>Using HydraFacial, Microdermabrasion, RF Skin Tightening, LED Therapy, and Oxygen Dome for advanced skin renewal.</p>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Skin Rejuvenation</h3>
-      <p>Targeted treatments designed to brighten, smooth, and refresh your complexion.</p>
+    <div class="accordion">
+      <button class="accordion-btn">Soothing Treatments</button>
+      <div class="accordion-content">
+        <p>Barrier‑repairing treatments for sensitive, irritated, or reactive skin types.</p>
+      </div>
     </div>
   </section>
 
   <!-- PRODUCTS -->
-  <section class="products">
+  <section class="products fade-in">
     <h2>Our Products</h2>
 
-    <div class="card">
-      <h3>Luxury Body Oil</h3>
-      <p>Lightweight, nourishing oil for smooth, glowing skin.</p>
-    </div>
-
-    <div class="card">
-      <h3>Herbal Facial Cleanser</h3>
-      <p>Gentle botanical cleanser for daily use.</p>
-    </div>
-
-    <div class="card">
-      <h3>Aromatherapy Candles</h3>
-      <p>Relaxing scents to elevate your self‑care rituals.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hydrating Skin Serum</h3>
-      <p>Deep hydration for plump, radiant skin.</p>
+    <div class="product-box">
+      <p>
+        Luxury Body Oil • Herbal Facial Cleanser • Aromatherapy Candles • Hydrating Skin Serum • Botanical Toner • Glow Mist • Body Scrub • Silk Moisturizer
+      </p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section class="about fade-in">
     <h2>About Royal Spa</h2>
     <p>
       A quiet space for intentional care. We focus on subtle, natural‑looking improvements that align with your features, lifestyle, and comfort level.
     </p>
-    <p>
-      Our approach blends medical knowledge with a minimalist philosophy: fewer, better treatments—chosen with care, explained with clarity, and delivered with respect for your time and energy.
-    </p>
   </section>
 
-  <!-- CONTACT / BOOKING -->
-  <section id="contact" class="contact">
+  <!-- CONTACT -->
+  <section id="contact" class="contact fade-in">
     <h2>Book an Appointment</h2>
 
     <form>
@@ -112,11 +111,11 @@
       <label>Email:</label>
       <input type="email" required>
 
-      <label>Select Service:</label>
+      <label>Service:</label>
       <select>
         <option>Advanced Facial</option>
         <option>Medical‑Grade Peel</option>
-        <option>Soothing Treatment</option>
+        <option>Relaxing Massage</option>
       </select>
 
       <label>Date:</label>
@@ -131,8 +130,15 @@
     <p>© 2025 Royal Spa. All rights reserved.</p>
   </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
+  
+   
+      
+    
+   
 
 
  
