@@ -1,23 +1,5 @@
 
-/* Navigation Bar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px 0;
-  background: #fce8f1; /* صورتی ملایم */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
 
-.navbar a {
-  text-decoration: none;
-  color: #b8860b; /* طلایی */
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.3s;
-}
 /* GLOBAL */
 body {
   margin: 0;
@@ -168,14 +150,34 @@ footer {
   background: #ffeef4;
   color: #7a4f5a;
 }
-
-
-.navbar a:hover {
-  color: #d4a017; /* طلایی روشن‌تر */
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px 0;
+  background: #fce8f1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
- 
+.navbar a {
+  text-decoration: none;
+  color: #b8860b;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
 
+.navbar a:hover {
+  color: #d4a017;
+}
+
+
+
+
+ 
 
 
 
